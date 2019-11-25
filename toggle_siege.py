@@ -3,7 +3,7 @@
 import sys
 import os
 
-INSTALL_PATH = "D:/Program Files/Steam/steamapps/common/Tom Clancy's Rainbow Six Siege/"
+INSTALL_PATH = r"D:/Program Files/Steam/steamapps/common/Tom Clancy's Rainbow Six Siege/"
 DEFAULT = os.path.join(INSTALL_PATH, 'defaultargs.dll')
 UPLAY_BACKUP = os.path.join(INSTALL_PATH, 'defaultargs_uplay.dll')
 STEAM_BACKUP = os.path.join(INSTALL_PATH, 'defaultargs_steam.dll')
@@ -20,8 +20,8 @@ if __name__ == '__main__':
         option = 'uplay'
     else:
         print('No defaultargs backup found. You\'ll have to rename your '
-        'defaultargs.dll to defaultargs_<platform>.dll and run "repair '
-        'game" from the other launcher in order to have both DLLs available.')
+              'defaultargs.dll to defaultargs_<platform>.dll and run "repair '
+              'game" from the other launcher in order to have both DLLs available.')
         raise SystemExit
 
     if option == 'steam' and os.path.exists(STEAM_BACKUP):
